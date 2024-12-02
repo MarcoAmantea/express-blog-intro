@@ -15,10 +15,10 @@ app.get("/", (req, res) => {
 })
 
 //Rotta bacheca che ritorna la lista dei post
-app.get("/bacheca", (req,res) => {
-    const post = {
-        posts: postsList,
-        totale: postsList.length      
+app.get("/bacheca/", (req,res) => {
+    const post = {    
+        "posts": postsList,
+        "conteggio totale posts": postsList.length,
     }
     res.json(post);   
 })
